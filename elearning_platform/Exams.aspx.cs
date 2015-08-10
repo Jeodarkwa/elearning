@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using CORE.DAO; 
+
 
 namespace elearning_platform
 {
@@ -11,7 +13,43 @@ namespace elearning_platform
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            grvNightTruck.Visible = true;
+            populateGridQuestions();
+        }
+
+
+
+        private IList<Exams> ExamsQuestions()
+        {
+
+            Exams Questions = new Exams();
+
+            IList<Exams> newExams; 
+
+
+            Questions.Exams_ID = 2;
+
+            List<String> words;
+            words = new List<String>();
+            for (int i = 0; 1 < 1; i++)
+            {
+               
+                words.Add("this is +" + i);
+            }
+
+            Questions.Exmas_Question = words;
+
+
+
+            return newExams; 
+        }
+
+
+        private void populateGridQuestions()
+        {
+
+            grvNightTruck.DataSource = ExamsQuestions();
+            grvNightTruck.DataBind(); 
+
         }
 
 
