@@ -68,6 +68,7 @@
                         <li><a runat="server" href="~/Home">Home</a></li>
                         <li><a runat="server" href="~/Exams">Exams</a></li>
                         <li><a runat="server" href="~/Contact">Contact</a></li>
+                         <li><a id="A1" runat="server" href="~/Lessons">Lessons</a></li>
                     </ul>
                 </nav>
             </div>
