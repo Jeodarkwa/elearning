@@ -57,7 +57,7 @@
 
         <asp:repeater id="rpResults" runat="server">
             <ItemTemplate>
-        <li><asp:checkbox id="chkbx" runat="server" /> <%#Eval("Exmas_Question")%></li>
+        <li><asp:checkbox id="chkbx" runat="server" /> <%#Eval("Exmas_Question._questions")%></li>
             </ItemTemplate>
                     </asp:repeater>
 

@@ -18,37 +18,38 @@ namespace elearning_platform
 
 
 
-        private IList<Exams> ExamsQuestions()
+        private List<Exams> ExamsQuestions()
         {
+           
+            Exams newExams = new Exams();
+            Questions newQuestions = new Questions();
+            List<Exams> ExamQuestions = new List<Exams>(); 
 
-            Exams Questions = new Exams();
 
-            List<Exams> newExams = new List<Exams>(); 
-
-
-            Questions.Exams_ID = 2;
-
-            List<String> words;
-            words = new List<String>();
-            for (int i = 0; i < 2; i++)
+            for (Int16 i = 1; i < 4; i++)
             {
-               
-                words.Add("this is +" + i);
+                newQuestions._questions = i +"this is just a questions";
+                newQuestions.Question_ID = i;
+
+                newExams.Exams_ID = i;
+                newExams.Exmas_Question = newQuestions; 
+            //    newExams.Exmas_Question._questions = i + "this is just a questions";
+              //  newExams.Exmas_Question = newQuestions.;
+
+                ExamQuestions.Add(newExams);
             }
 
-          //  Questions.Exmas_Question = words;
 
-            newExams.Add(Questions); 
-
-            return newExams; 
+            return ExamQuestions;  
         }
+
 
 
         private void populateGridQuestions()
         {
 
             rpResults.DataSource = ExamsQuestions();
-
+            
             rpResults.DataBind();
            
 
