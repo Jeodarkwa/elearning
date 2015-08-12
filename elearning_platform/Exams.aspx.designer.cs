@@ -40,6 +40,15 @@ namespace elearning_platform {
         protected global::System.Web.UI.WebControls.CheckBoxList question3List;
         
         /// <summary>
+        /// rpResults control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater rpResults;
+        
+        /// <summary>
         /// grvNightTruck control.
         /// </summary>
         /// <remarks>

@@ -47,7 +47,7 @@
             <asp:CheckBoxList runat="server" ID="question3List">
                 <asp:ListItem Value="A">This is answer A</asp:ListItem>
                 
-                <asp:ListItem Value="B">This is answer B</asp:ListItem>
+                <asp:ListItem Value="B" Text="This is answer B"/>
                 <asp:ListItem Value="C">This is answer C</asp:ListItem>
                 <asp:ListItem Value="D">This is answer D</asp:ListItem>
                 
@@ -55,13 +55,19 @@
 
         </Div>
 
+        <asp:repeater id="rpResults" runat="server">
+            <ItemTemplate>
+        <li><asp:checkbox id="chkbx" runat="server" /> <%#Eval("Exmas_Question")%></li>
+            </ItemTemplate>
+                    </asp:repeater>
 
+      
         <!-- gridview -->
         <%--     OnRowDataBound="grvSOTickets_RowDataBound"  OnRowCommand="grvSOTickets_RowCommand" --%>
 
         <asp:GridView ID="grvNightTruck" runat="server"  Visible="false"
                     AutoGenerateColumns="False"
-                    DataKeyNames="ServiceOrderTicketPK"
+                    DataKeyNames="Exmas_Question"
                    
                 
                     EnableTheming="False">
@@ -85,22 +91,22 @@
                                 <table cellpadding="2" cellspacing="0" border="0" width="640px">
                                     <tr>
                                         <td width="25px" align="left" valign="top">
-                                            <asp:CheckBox ID="chkSOTicket" runat="server" checked='<%# Bind("IsChecked") %>' OnCheckedChanged="chkSOTicket_OnCheckedChanged" AutoPostBack="true" />
+                                            <asp:CheckBox ID="chkSOTicket" runat="server" checked='<%# Bind("Answers") %>' OnCheckedChanged="chkSOTicket_OnCheckedChanged" AutoPostBack="true" />
                                         </td>
                                         <td width="35px" align="left" valign="top">
-                                            <asp:Label ID="lblMapNumber" runat="server" Text='<%# Eval("TruckNumber") %>' />
+                                            <asp:Label ID="lblMapNumber" runat="server" Text='<%# Eval("Answers") %>' />
                                         </td>
                                         <td width="35px" align="left" valign="top">
-                                            <asp:Label ID="lblMileage" runat="server" Text='<%# Eval("Mileage") %>' />
+                                            <asp:Label ID="lblMileage" runat="server" Text='<%# Eval("Answers") %>' />
                                         </td>
                                         <td width="100px" align="left" valign="top">
-                                            <asp:Label ID="lblLocationCount" runat="server" Text='<%# Eval("TruckSections") %>' />
+                                            <asp:Label ID="lblLocationCount" runat="server" Text='<%# Eval("Answers") %>' />
                                         </td>
                                         <td width="100px" align="left" valign="top">
                                            <%-- <asp:DropDownList ID="ddlTechnicianSOT" runat="server" DataSource='<%# PopulateTechnicianDDL(DataBinder.Eval(Container.DataItem, "ServiceOrderPK").ToString()) %>' DataTextField="FullName" DataValueField="TechnicianPK"  SelectedValue='<%# Bind("TechnicianPK") %>' OnSelectedIndexChanged="ddlTechnicianSOT_OnSelectedIndexChanged" AutoPostBack="true"/> --%>
                                         </td>
                                         <td width="345px" align="left" valign="top">
-                                            <asp:TextBox ID="txtInstructionsSOT" runat="server" Text='<%# Bind("Instruction") %>'  TextMode="MultiLine" Width="100%" />
+                                            <asp:TextBox ID="txtInstructionsSOT" runat="server" Text='<%# Bind("Answers") %>'  TextMode="MultiLine" Width="100%" />
                                         </td>
                                     </tr>
                                     <tr>

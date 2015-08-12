@@ -23,22 +23,22 @@ namespace elearning_platform
 
             Exams Questions = new Exams();
 
-            IList<Exams> newExams; 
+            List<Exams> newExams = new List<Exams>(); 
 
 
             Questions.Exams_ID = 2;
 
             List<String> words;
             words = new List<String>();
-            for (int i = 0; 1 < 1; i++)
+            for (int i = 0; i < 2; i++)
             {
                
                 words.Add("this is +" + i);
             }
 
-            Questions.Exmas_Question = words;
+          //  Questions.Exmas_Question = words;
 
-
+            newExams.Add(Questions); 
 
             return newExams; 
         }
@@ -47,8 +47,13 @@ namespace elearning_platform
         private void populateGridQuestions()
         {
 
-            grvNightTruck.DataSource = ExamsQuestions();
-            grvNightTruck.DataBind(); 
+            rpResults.DataSource = ExamsQuestions();
+
+            rpResults.DataBind();
+           
+
+            /*  grvNightTruck.DataSource = ExamsQuestions();
+              grvNightTruck.DataBind(); */
 
         }
 
