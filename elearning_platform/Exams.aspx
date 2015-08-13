@@ -8,65 +8,71 @@
     </hgroup>
 
     <article>
-       <%-- Question Repeater--%>
-        <asp:repeater id="RptQuestions" runat="server">
+        <%-- Question Repeater--%>
+        <asp:Repeater ID="RptQuestions" runat="server">
             <ItemTemplate>
-                
-                  <asp:Label ID="lblExQuestions" runat="server" Text=<%#DataBinder.Eval(Container.DataItem, "Exmas_Question.Examquestion" )%>/> 
-                
+
+                <asp:Label ID="lblExQuestions" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "Exmas_Question.Examquestion" )%>' />
+
                 <ul>
-                     <li>A <asp:checkbox id="chkbxQt1" runat="server" Text=<%#DataBinder.Eval(Container.DataItem, "Exmas_Question.solution1" )%>/> 
-                       </li>
-                     <li>B <asp:checkbox id="chkbxQt2" runat="server" Text=<%#DataBinder.Eval(Container.DataItem, "Exmas_Question.solution2" )%>/> 
-                       </li>
-                     <li>C <asp:checkbox id="chkbxQ3" runat="server" Text=<%#DataBinder.Eval(Container.DataItem, "Exmas_Question.solution3" )%>/> 
-                       </li>
+                    <li>A
+                        <asp:CheckBox ID="chkbxQt1" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "Exmas_Question.solution1" )%>' />
+                    </li>
+                    <li>B
+                        <asp:CheckBox ID="chkbxQt2" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "Exmas_Question.solution2" )%>' />
+                    </li>
+                    <li>C
+                        <asp:CheckBox ID="chkbxQ3" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "Exmas_Question.solution3" )%>' />
+                    </li>
                 </ul>
-                      
-                      
+
+
             </ItemTemplate>
             <SeparatorTemplate>
-             &nbsp;
+                &nbsp;
             </SeparatorTemplate>
             <AlternatingItemTemplate>
-                
-                   <asp:Label ID="lblExQuestions" runat="server" Text=<%#DataBinder.Eval(Container.DataItem, "Exmas_Question.Examquestion" )%>/> 
-                
+
+                <asp:Label ID="lblExQuestions" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "Exmas_Question.Examquestion" )%>' />
+
                 <ul>
-                     <li>A <asp:checkbox id="chkbxQt1" runat="server" Text=<%#DataBinder.Eval(Container.DataItem, "Exmas_Question.solution1" )%>/> 
-                       </li>
-                     <li>B <asp:checkbox id="chkbxQt2" runat="server" Text=<%#DataBinder.Eval(Container.DataItem, "Exmas_Question.solution2" )%>/> 
-                       </li>
-                     <li>C <asp:checkbox id="chkbxQt3" runat="server" Text=<%#DataBinder.Eval(Container.DataItem, "Exmas_Question.solution3" )%>/> 
-                       </li>
+                    <li>A
+                        <asp:CheckBox ID="chkbxQt1" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "Exmas_Question.solution1" )%>' />
+                    </li>
+                    <li>B
+                        <asp:CheckBox ID="chkbxQt2" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "Exmas_Question.solution2" )%>' />
+                    </li>
+                    <li>C
+                        <asp:CheckBox ID="chkbxQt3" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "Exmas_Question.solution3" )%>' />
+                    </li>
                 </ul>
-                      
+
             </AlternatingItemTemplate>
-         </asp:repeater>
+        </asp:Repeater>
 
 
         <br />
         <asp:Button ID="btn_submit" runat="server" Text="Submit Solution" OnClick="btn_submit_Click" />
-            <asp:Label ID="lblResults" runat="server"></asp:Label>
+        <asp:Label ID="lblResults" runat="server"></asp:Label>
 
 
 
-      <asp:Repeater id="repRoles" runat="server">
-       <ItemTemplate>
-              <asp:literal ID="Literal1" runat="server" text=<%# DataBinder.Eval(Container.DataItem, "ItemTitle") %>></asp:literal>
-              <br />
-              <asp:CheckBoxList ID="CheckBoxList1" runat="server" DataSource=<%# (DataBinder.Eval(Container.DataItem,"")) %> 
-                                    DataTextField="ItemName" DataValueField="ItemValue">
-              </asp:CheckBoxList>
-       </ItemTemplate>
-</asp:Repeater>
-                </article>
+        <asp:Repeater ID="repRoles" runat="server">
+            <ItemTemplate>
+                <asp:Literal ID="Literal1" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "ItemTitle") %>'></asp:Literal>
+                <br />
+                <asp:CheckBoxList ID="CheckBoxList1" runat="server" DataSource='<%# (DataBinder.Eval(Container.DataItem,"")) %>'
+                    DataTextField="ItemName" DataValueField="ItemValue">
+                </asp:CheckBoxList>
+            </ItemTemplate>
+        </asp:Repeater>
+    </article>
 
 
 
     <aside>
         <h3>Exams code</h3>
-        <p>        
+        <p>
             Return to Home after Exams
         </p>
         <ul>
