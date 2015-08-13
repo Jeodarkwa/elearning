@@ -8,8 +8,7 @@
     </hgroup>
 
     <article>
-        
-
+       <%-- Question Repeater--%>
         <asp:repeater id="RptQuestions" runat="server">
             <ItemTemplate>
                 <%#DataBinder.Eval(Container.DataItem, "Exmas_Question.Examquestion" )%>
@@ -17,15 +16,30 @@
                      <li><asp:checkbox id="chkbxQt1" runat="server" /> <%#Eval("Exmas_Question.solution1")%></li>
                      <li><asp:checkbox id="chkbxQt2" runat="server" /> <%#Eval("Exmas_Question.solution2")%></li>
                      <li><asp:checkbox id="chkbxQt4" runat="server" /> <%#Eval("Exmas_Question.solution3")%></li>
+
                     </ul>
             </ItemTemplate>
+            <SeparatorTemplate>
+                &nbps
+            </SeparatorTemplate>
+            <AlternatingItemTemplate>
+                 <%#DataBinder.Eval(Container.DataItem, "Exmas_Question.Examquestion" )%>
+                <ul>
+                     <li><asp:checkbox id="chkbxQt1" runat="server" /> <%#Eval("Exmas_Question.solution1")%></li>
+                     <li><asp:checkbox id="chkbxQt2" runat="server" /> <%#Eval("Exmas_Question.solution2")%></li>
+                     <li><asp:checkbox id="chkbxQt4" runat="server" /> <%#Eval("Exmas_Question.solution3")%></li>
+                    </ul>
+            </AlternatingItemTemplate>
+
          </asp:repeater>
 
 
         <br />
-        <asp:Button ID="btn_submit" runat="server" Text="Submit Solution" />
-            
+        <asp:Button ID="btn_submit" runat="server" Text="Submit Solution" OnClick="btn_submit_Click" />
+            <asp:Label ID="lblResults" runat="server"></asp:Label>
                 </article>
+
+
 
     <aside>
         <h3>Exams code</h3>

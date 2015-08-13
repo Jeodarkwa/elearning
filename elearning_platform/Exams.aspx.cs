@@ -13,36 +13,26 @@ namespace elearning_platform
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if(!IsPostBack)
             populateRptQuestions();
         }
 
-
-
         private List<Exams> ExamsQuestions()
         {
-           
-            Exams newExams = new Exams();
-            Questions newQuestions = new Questions();
             List<Exams> ExamQuestions = new List<Exams>(); 
-
-
             for (Int16 i = 1; i < 4; i++)
             {
-
-                newQuestions.Examquestion = i +"this is just a questions";
-                newQuestions.solution1 = i + "this is just a questions";
-                newQuestions.solution2 = i + "this is just a questions";
-                newQuestions.solution3 = i + "this is just a questions";
-
+                Exams newExams = new Exams();
+                Questions newQuestions = new Questions();
+                newQuestions.Examquestion = "This is the first "+i +" question";
+                newQuestions.solution1 = "choose A";
+                newQuestions.solution2 = "Choose B";
+                newQuestions.solution3 = "Choose C";
                 newQuestions.Question_ID = i;
-
                 newExams.Exams_ID = i;
                 newExams.Exmas_Question = newQuestions; 
-          
-
                 ExamQuestions.Add(newExams);
             }
-
 
             return ExamQuestions;  
         }
@@ -55,39 +45,22 @@ namespace elearning_platform
             RptQuestions.DataBind();
         }
 
-
-        protected void chkSOTicket_OnCheckedChanged(object sender, EventArgs e)
+        protected void btn_submit_Click(object sender, EventArgs e)
         {
-            DateTime start = DateTime.Now;
-           // logger.Debug("BEGIN chkSOTicket_OnCheckedChanged: " + start);
-
-            CheckBox chkSOTicket = (CheckBox)sender;
-            GridViewRow gridViewRowSOT = (GridViewRow)chkSOTicket.Parent.Parent;
-
-            if (!chkSOTicket.Checked)
+            int counter = 0;
+            foreach (RepeaterItem reptItem in RptQuestions.Items)
             {
-                DropDownList ddlTechnicianSOT = (DropDownList)gridViewRowSOT.FindControl("ddlTechnicianSOT");
-               // ddlTechnicianSOT.SelectedValue = Utils.NULL_INT.ToString();
+                CheckBox chkbx1 = (CheckBox)reptItem.FindControl("chkbxQt1");
+                if (chkbx1.Checked) counter++;
+
+            
             }
 
-            GridView gvSOTLocations = (GridView)gridViewRowSOT.FindControl("grvSOTLocations");
-
-            foreach (GridViewRow gridViewRowSOTL in gvSOTLocations.Rows)
-            {
-                if (gridViewRowSOTL.Enabled)
-                {
-                    CheckBox chkSOTLocation = (CheckBox)gridViewRowSOTL.FindControl("chkSOTLocation");
-                    chkSOTLocation.Checked = chkSOTicket.Checked;
-                    if (!chkSOTLocation.Checked)
-                    {
-                        DropDownList ddlTechnicianSOTL = (DropDownList)gridViewRowSOTL.FindControl("ddlTechnicianSOTL");
-                        //ddlTechnicianSOTL.SelectedValue = Utils.NULL_INT.ToString();
-                    }
-                }
-            }
-            TimeSpan duration = DateTime.Now - start;
-           // logger.Debug("END chkSOTicket_OnCheckedChanged: " + duration.Minutes + "." + duration.Seconds + "." + duration.Milliseconds);
+            lblResults.Text = "No of checked records is " + counter.ToString();
         }
+
+
+
 
     }
 }
