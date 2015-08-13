@@ -12,7 +12,7 @@ namespace CORE.DAO
         public String solution1 { get; set; }
         public String solution2 { get; set; }
         public String solution3 { get; set; }
-        public Char answer { get; set; }
+        //public Char answer { get; set; }
 
     }
 }
