@@ -13,49 +13,13 @@ namespace elearning_platform {
     public partial class About {
         
         /// <summary>
-        /// question1List control.
+        /// RptQuestions control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBoxList question1List;
-        
-        /// <summary>
-        /// question2List control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBoxList question2List;
-        
-        /// <summary>
-        /// question3List control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBoxList question3List;
-        
-        /// <summary>
-        /// rpResults control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rpResults;
-        
-        /// <summary>
-        /// grvNightTruck control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grvNightTruck;
+        protected global::System.Web.UI.WebControls.Repeater RptQuestions;
         
         /// <summary>
         /// btn_submit control.

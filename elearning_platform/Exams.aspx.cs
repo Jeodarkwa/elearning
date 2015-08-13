@@ -13,7 +13,7 @@ namespace elearning_platform
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            populateGridQuestions();
+            populateRptQuestions();
         }
 
 
@@ -28,13 +28,17 @@ namespace elearning_platform
 
             for (Int16 i = 1; i < 4; i++)
             {
-                newQuestions._questions = i +"this is just a questions";
+
+                newQuestions.Examquestion = i +"this is just a questions";
+                newQuestions.solution1 = i + "this is just a questions";
+                newQuestions.solution2 = i + "this is just a questions";
+                newQuestions.solution3 = i + "this is just a questions";
+
                 newQuestions.Question_ID = i;
 
                 newExams.Exams_ID = i;
                 newExams.Exmas_Question = newQuestions; 
-            //    newExams.Exmas_Question._questions = i + "this is just a questions";
-              //  newExams.Exmas_Question = newQuestions.;
+          
 
                 ExamQuestions.Add(newExams);
             }
@@ -45,17 +49,10 @@ namespace elearning_platform
 
 
 
-        private void populateGridQuestions()
+        private void populateRptQuestions()
         {
-
-            rpResults.DataSource = ExamsQuestions();
-            
-            rpResults.DataBind();
-           
-
-            /*  grvNightTruck.DataSource = ExamsQuestions();
-              grvNightTruck.DataBind(); */
-
+            RptQuestions.DataSource = ExamsQuestions();
+            RptQuestions.DataBind();
         }
 
 
