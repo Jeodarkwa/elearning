@@ -20,7 +20,7 @@ namespace elearning_platform
         public List<Exams> ExamsQuestions()
         {
             List<Exams> ExamQuestions = new List<Exams>(); 
-            for (Int16 i = 1; i < 4; i++)
+            for (Int16 i = 1; i < 10; i++)
             {
                 Exams newExams = new Exams();
                 Questions newQuestions = new Questions();
@@ -52,17 +52,19 @@ namespace elearning_platform
             String counter = null;
             foreach (RepeaterItem reptItem in RptQuestions.Items)
             {
-                CheckBox chkbx1 = (CheckBox)reptItem.FindControl("chkbxQt1");
-                if (chkbx1.Checked)
-                    counter = chkbx1.Text;
+                CheckBox chkbxQ = (CheckBox)reptItem.FindControl("chkbxQ");
+                if (chkbxQ.Checked)
+                    counter = chkbxQ.Text;
 
-                CheckBox chkbx2 = (CheckBox)reptItem.FindControl("chkbxQt2");
-                if (chkbx2.Checked)
-                    counter = chkbx2.Text;
+                CheckBox chkbxW = (CheckBox)reptItem.FindControl("chkbxQt");
+                if (chkbxW.Checked)
+                    counter = chkbxW.Text;
 
-               // CheckBox chkbx3 = (CheckBox)reptItem.FindControl("chkbxQt3");
-               // if (chkbx3.Checked)
-                   // counter = chkbx3.Text;
+                CheckBox chkbxR = (CheckBox)reptItem.FindControl("chkbxQtt");
+                if (chkbxR.Checked)
+                    counter = chkbxR.Text;
+
+              
             
             }
 

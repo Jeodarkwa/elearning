@@ -15,11 +15,11 @@
                   <asp:Label ID="lblExQuestions" runat="server" Text=<%#DataBinder.Eval(Container.DataItem, "Exmas_Question.Examquestion" )%>/> 
                 
                 <ul>
-                     <li>A <asp:checkbox id="chkbxQt1" runat="server" Text=<%#DataBinder.Eval(Container.DataItem, "Exmas_Question.solution1" )%>/> 
+                     <li>A <asp:checkbox id="chkbxQ" runat="server" Text=<%#DataBinder.Eval(Container.DataItem, "Exmas_Question.solution1" )%>/> 
                        </li>
-                     <li>B <asp:checkbox id="chkbxQt2" runat="server" Text=<%#DataBinder.Eval(Container.DataItem, "Exmas_Question.solution2" )%>/> 
+                     <li>B <asp:checkbox id="chkbxQt" runat="server" Text=<%#DataBinder.Eval(Container.DataItem, "Exmas_Question.solution2" )%>/> 
                        </li>
-                     <li>C <asp:checkbox id="chkbxQ3" runat="server" Text=<%#DataBinder.Eval(Container.DataItem, "Exmas_Question.solution3" )%>/> 
+                     <li>C <asp:checkbox id="chkbxQtt" runat="server" Text=<%#DataBinder.Eval(Container.DataItem, "Exmas_Question.solution3" )%>/> 
                        </li>
                 </ul>
                       
@@ -32,12 +32,12 @@
                 
                    <asp:Label ID="lblExQuestions" runat="server" Text=<%#DataBinder.Eval(Container.DataItem, "Exmas_Question.Examquestion" )%>/> 
                 
-                <ul>
-                     <li>A <asp:checkbox id="chkbxQt1" runat="server" Text=<%#DataBinder.Eval(Container.DataItem, "Exmas_Question.solution1" )%>/> 
+                    <ul>
+                     <li>A <asp:checkbox id="chkbxQ" runat="server" Text=<%#DataBinder.Eval(Container.DataItem, "Exmas_Question.solution1" )%>/> 
                        </li>
-                     <li>B <asp:checkbox id="chkbxQt2" runat="server" Text=<%#DataBinder.Eval(Container.DataItem, "Exmas_Question.solution2" )%>/> 
+                     <li>B <asp:checkbox id="chkbxQt" runat="server" Text=<%#DataBinder.Eval(Container.DataItem, "Exmas_Question.solution2" )%>/> 
                        </li>
-                     <li>C <asp:checkbox id="chkbxQt3" runat="server" Text=<%#DataBinder.Eval(Container.DataItem, "Exmas_Question.solution3" )%>/> 
+                     <li>C <asp:checkbox id="chkbxQtt" runat="server" Text=<%#DataBinder.Eval(Container.DataItem, "Exmas_Question.solution3" )%>/> 
                        </li>
                 </ul>
                       
