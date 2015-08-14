@@ -29,7 +29,6 @@
              &nbsp;
             </SeparatorTemplate>
             <AlternatingItemTemplate>
-                
                    <asp:Label ID="lblExQuestions" runat="server" Text=<%#DataBinder.Eval(Container.DataItem, "Exmas_Question.Examquestion" )%>/> 
                 
                     <ul>
@@ -39,8 +38,7 @@
                        </li>
                      <li>C <asp:checkbox id="chkbxQtt" runat="server" Text=<%#DataBinder.Eval(Container.DataItem, "Exmas_Question.solution3" )%>/> 
                        </li>
-                </ul>
-                      
+                </ul>     
             </AlternatingItemTemplate>
          </asp:repeater>
 

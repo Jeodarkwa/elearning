@@ -52,6 +52,8 @@ namespace elearning_platform
             String counter = null;
             foreach (RepeaterItem reptItem in RptQuestions.Items)
             {
+                var dtItem = reptItem.ClientID;  
+
                 CheckBox chkbxQ = (CheckBox)reptItem.FindControl("chkbxQ");
                 if (chkbxQ.Checked)
                     counter = chkbxQ.Text;
