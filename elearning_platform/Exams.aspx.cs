@@ -49,28 +49,32 @@ namespace elearning_platform
 
         protected void btn_submit_Click(object sender, EventArgs e)
         {
-            String counter = null;
+
+            Int16 counter = 0; 
+            Dictionary<Int16, String> KeyResults = new Dictionary<short, string>(); 
+
+            String answer = null;
             foreach (RepeaterItem reptItem in RptQuestions.Items)
             {
-                var dtItem = reptItem.ClientID;  
+                
+                counter ++; 
 
                 CheckBox chkbxQ = (CheckBox)reptItem.FindControl("chkbxQ");
                 if (chkbxQ.Checked)
-                    counter = chkbxQ.Text;
+                    answer = chkbxQ.Text;
 
                 CheckBox chkbxW = (CheckBox)reptItem.FindControl("chkbxQt");
                 if (chkbxW.Checked)
-                    counter = chkbxW.Text;
+                    answer = chkbxW.Text;
 
                 CheckBox chkbxR = (CheckBox)reptItem.FindControl("chkbxQtt");
                 if (chkbxR.Checked)
-                    counter = chkbxR.Text;
+                    answer = chkbxR.Text;
 
-              
+                KeyResults.Add(counter, answer); 
             
             }
-
-            lblResults.Text = "No of checked records is " + counter;
+            lblResults.Text = "No of checked records is " + KeyResults.ToString();
         }
 
 
