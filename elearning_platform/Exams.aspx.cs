@@ -4,7 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using CORE.DAO; 
+using BUSINESS_LAYER.EXAMSCORE; 
+using CORE.DAO;
+
 
 
 namespace elearning_platform
@@ -19,15 +21,16 @@ namespace elearning_platform
 
         public List<Exams> ExamsQuestions()
         {
+           
             List<Exams> ExamQuestions = new List<Exams>(); 
-            for (Int16 i = 1; i < 4; i++)
+            for (Int16 i = 1; i < 3; i++)
             {
                 Exams newExams = new Exams();
                 Questions newQuestions = new Questions();
-                newQuestions.Examquestion = i + ". This is the first " + i + " question";
-                newQuestions.solution1 = "choose A";
-                newQuestions.solution2 = "Choose B";
-                newQuestions.solution3 = "Choose C";
+                newQuestions.Question = i + ". This is the first " + i + " question";
+                newQuestions.multiplechoice1 = "choose A";
+                newQuestions.multiplechoice2 = "Choose B";
+                newQuestions.multiplechoice3 = "Choose C";
                 newQuestions.Question_ID = i;
                 newExams.Exams_ID = i;
                 newExams.Exmas_Question = newQuestions; 
@@ -38,33 +41,59 @@ namespace elearning_platform
         }
 
 
-
+        /// <summary>
+        /// Bind the question Data
+        /// </summary>
         private void populateRptQuestions()
         {
             RptQuestions.DataSource = ExamsQuestions();
-           
-
+            RptQuestions.ID = "exams34";
             RptQuestions.DataBind();
         }
 
         protected void btn_submit_Click(object sender, EventArgs e)
         {
             String counter = null;
-            foreach (RepeaterItem reptItem in RptQuestions.Items)
-            {
-                CheckBox chkbx1 = (CheckBox)reptItem.FindControl("chkbxQt1");
-                if (chkbx1.Checked)
-                    counter = chkbx1.Text;
 
-                CheckBox chkbx2 = (CheckBox)reptItem.FindControl("chkbxQt2");
-                if (chkbx2.Checked)
-                    counter = chkbx2.Text;
+            int RptItCount = RptQuestions.Items.Count;
+            string[] chsAnswers = new string[RptItCount];
+         //  List<string[]> selectedAnswes = new List<string[]>();
 
-               // CheckBox chkbx3 = (CheckBox)reptItem.FindControl("chkbxQt3");
-               // if (chkbx3.Checked)
-                   // counter = chkbx3.Text;
-            
-            }
+            String examsID = RptQuestions.ID; 
+               foreach (RepeaterItem reptItem in RptQuestions.Items)
+               {
+
+                   int i = reptItem.ItemIndex; 
+
+                   CheckBox chkbxQ = (CheckBox)reptItem.FindControl("chkbxQ");
+                   if (chkbxQ.Checked)
+                   {
+                       counter = chkbxQ.Text;
+                       chsAnswers[i] = "a";
+                   }
+
+                   CheckBox chkbxW = (CheckBox)reptItem.FindControl("chkbxQt");
+                   if (chkbxW.Checked)
+                   {
+                       counter = chkbxQ.Text;
+                       chsAnswers[i] = "b";
+                   }
+
+                   CheckBox chkbxR = (CheckBox)reptItem.FindControl("chkbxQtt");
+                   if (chkbxR.Checked)
+                   {
+                       counter = chkbxQ.Text;
+                       chsAnswers[i] = "c";
+                   }
+
+                   counter = null;
+
+                   //selectedAnswes.Add(questions);
+               }
+
+            BLL_Exams exams = new BLL_Exams();
+
+            int[] exResults = exams.correctExam(chsAnswers, 3);
 
             lblResults.Text = "No of checked records is " + counter;
         }

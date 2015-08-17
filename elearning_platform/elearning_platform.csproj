@@ -350,8 +350,15 @@
   <ItemGroup>
     <ProjectReference Include="..\CORE\CORE.csproj">
       <Project>{c3c37666-3eb7-4363-8fb1-44cdee3babeb}</Project>
-      <Name>CORE %28CORE\CORE%29</Name>
+      <Name>CORE</Name>
     </ProjectReference>
+    <ProjectReference Include="..\EXAMS_LAYER\EXAMS_LAYER.csproj">
+      <Project>{83f9b024-3459-4ea9-9b01-4eac3aacc6fd}</Project>
+      <Name>EXAMS_LAYER</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
