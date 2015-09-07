@@ -348,10 +348,13 @@
     <Content Include="Site.Master" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CORE\CORE.csproj">
+    <ProjectReference Include="..\CORE\ElearningPlatformCore.csproj">
       <Project>{c3c37666-3eb7-4363-8fb1-44cdee3babeb}</Project>
-      <Name>CORE %28CORE\CORE%29</Name>
+      <Name>ElearningPlatformCore %28ElearningPlatformCore\ElearningPlatformCore%29</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

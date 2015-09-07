@@ -60,10 +60,23 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAO\Questions.cs" />
-    <Compile Include="DAO\Exams.cs" />
+    <Compile Include="BLL\Concrete\ExamsBLL.cs" />
+    <Compile Include="DAL\ConnString.cs" />
+    <Compile Include="DAL\ExamsDAL.cs" />
+    <Compile Include="DAO\Concrete\Question.cs" />
+    <Compile Include="DAO\Concrete\Exams.cs" />
+    <Compile Include="Factory\Concrete\BLLFactory.cs" />
+    <Compile Include="Factory\Concrete\DALFactory.cs" />
+    <Compile Include="Factory\IFactory\IBLLFactroy.cs" />
+    <Compile Include="BLL\InterfaceBLL\IExamsBLL.cs" />
+    <Compile Include="DAL\InterfaceDAL\IExamsDAL.cs" />
+    <Compile Include="DAO\Interface\IExams.cs" />
+    <Compile Include="DAO\Interface\IPersonel.cs" />
+    <Compile Include="DAO\Interface\IQuestion.cs" />
+    <Compile Include="Factory\IFactory\IDALFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="DAO\Students.cs" />
+    <Compile Include="DAO\Concrete\Personel.cs" />
+    <Compile Include="ServiceLocator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Web.Debug.config">
@@ -72,6 +85,9 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Service\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

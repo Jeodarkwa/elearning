@@ -1,13 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "elearning_platform", "elearning_platform\elearning_platform.csproj", "{9A6F4AEC-D574-4DFA-BD36-64AA2C52AD77}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CORE", "CORE", "{6BBFCDE2-4EFA-4A5D-8300-FB3979861167}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ElearningPlatformCore", "ElearningPlatformCore", "{6BBFCDE2-4EFA-4A5D-8300-FB3979861167}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CORE", "CORE\CORE.csproj", "{C3C37666-3EB7-4363-8FB1-44CDEE3BABEB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElearningPlatformCore", "CORE\ElearningPlatformCore.csproj", "{C3C37666-3EB7-4363-8FB1-44CDEE3BABEB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
