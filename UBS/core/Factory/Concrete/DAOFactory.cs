@@ -21,9 +21,9 @@ namespace ElearningPlatform.Core
             return new Personel();
         }
 
-        public static IQuestion BuildQuestionDAO()
+        public static IEnquires BuildQuestionDAO()
         {
-            return new Question(); 
+            return new Enquires(); 
         }
 
 

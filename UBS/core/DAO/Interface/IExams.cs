@@ -10,7 +10,7 @@ namespace ElearningPlatform.Core
     {
         int ExamsID { get; set; }
         //public String Exams_ID { get; set; }
-        IQuestion Exmas_Question { get; set; }
+        IEnquires Exmas_Question { get; set; }
         Array Answers { get; set; }
 
     }

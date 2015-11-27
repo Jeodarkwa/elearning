@@ -34,7 +34,7 @@ namespace ElearningPlatform.Core
                     //IExams requestedExams = new Exams();
                     //Question requestedQuestions = new Question();
                     IExams requestedExams = DAOFactory.BuildExamsDAO();
-                    IQuestion requestedQuestions = DAOFactory.BuildQuestionDAO();
+                    IEnquires requestedQuestions = DAOFactory.BuildQuestionDAO();
  
                     requestedQuestions.QuestionID = int.Parse(row["QuestionId"].ToString());
                     requestedQuestions.ExamsQuestion = row["QuestionMain"].ToString();
