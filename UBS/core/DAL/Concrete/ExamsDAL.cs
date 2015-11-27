@@ -200,6 +200,56 @@ namespace ElearningPlatform.Core.DAL
         }
 
 
+        /// <summary>
+        /// Get Questions by Exams ID
+        /// </summary>
+        /// <param name="examsID"></param>
+        /// <returns></returns>
+        public DataSet ExamQuestionsNSolutionGet(int examsID)
+        {
+
+            DataSet questionList = new DataSet("examsData");
+            try
+            {
+
+                using (SqlConnection stringConnection = new SqlConnection(ConnString.localConnection()))
+                {
+
+
+                    using (SqlCommand sqlCom = new SqlCommand())
+                    {
+                        sqlCom.Connection = stringConnection;
+                        Int32 rowsAffected;
+                        sqlCom.CommandType = CommandType.StoredProcedure;
+                        sqlCom.CommandText = "stPcd_ExamQuestionNSolutionGet";
+
+                        //sqlCom.Parameters.Add("@examsID", SqlDbType.Int, examsID);
+                        sqlCom.Parameters.AddWithValue("@ExamsId", examsID);
+
+                        stringConnection.Open();
+                        SqlDataAdapter dataAdapter = new SqlDataAdapter(sqlCom);
+                        // dataAdapter.SelectCommand = sqlCom;
+
+                        dataAdapter.Fill(questionList);
+                        rowsAffected = sqlCom.ExecuteNonQuery();
+                        stringConnection.Close();
+
+                    }
+                }
+            }
+            catch (Exception ee)
+            {
+                //Obravnava napak
+                Console.Write(ee);
+            }
+            finally
+            {
+
+            }
+            return questionList;
+        }
+
+
         public void InsertStudentAnswer(int studentID, int ExamsID)
         {
             throw new NotImplementedException(); 

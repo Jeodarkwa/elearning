@@ -20,6 +20,21 @@ namespace ElearningPlatform.Core
         }
 
 
+        /// <summary>
+        /// Patrick sei arrivato
+        /// </summary>
+        /// <param name="examsID"></param>
+        /// <returns></returns>
+       public DataSet ExamQuestionsNSolutionGet(int examsID)
+        {
+            DataSet newDa = new DataSet();
+
+            IExamsDAL getExamsQuestions = ServiceLocator.GetCurrentDALFactory().BuildExamsDal();
+           newDa = getExamsQuestions.ExamQuestionsNSolutionGet(examsID);
+
+            return newDa;
+        }
+
         public IList<IExams> GetExamsByIDs(int ExamsID)
         {
             IList<IExams> newExams = new List<IExams>();

@@ -57,5 +57,9 @@ namespace ElearningPlatform.Core
        /// <param name="score"></param>
        /// <param name="studentsAnswers"></param>
         void InsertStudentScore(int studentID, int examsID, int score, string[] studentsAnswers);
+
+        DataSet ExamQuestionsNSolutionGet(int examsID);
+
+
     }
 }
