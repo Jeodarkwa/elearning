@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using ElearningPlatform.Core;
+using System.Data;
 
 namespace ElearningPlatform.Core
 {
@@ -12,7 +13,8 @@ namespace ElearningPlatform.Core
     {
         int correctQuestion(IExams StudentAnswer);
         IList<IExams> GetExamsByIDs(int ExamsID);
-        int correctExam(IList<IExams> studentAnswers, int examsId); 
+        int correctExam(IList<IExams> studentAnswers, int examsId);
+        DataSet ExamQuestionsNSolutionGet(int examsID);
 
     }
 }

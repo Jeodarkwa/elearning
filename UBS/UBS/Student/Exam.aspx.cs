@@ -13,7 +13,11 @@ public partial class Exams_Exam : System.Web.UI.Page
     {
         if (FormsAuthentication.IsEnabled)
 
-            btn_submit.Text = HttpContext.Current.User.Identity.Name;       
+            btn_submit.Text = HttpContext.Current.User.Identity.Name;
+
+        IExamsBLL newExams = ServiceLocator.GetCurrentBLLFactory().BuildExamsBLL();
+        newExams.ExamQuestionsNSolutionGet(4);
+            
         
     }
 
