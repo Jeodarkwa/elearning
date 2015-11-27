@@ -1,0 +1,20 @@
+D:\FILES\PERSONALE\Synchronization\github\elearning\CORE\obj\Debug\CORE.dll
+D:\FILES\PERSONALE\Synchronization\github\elearning\CORE\bin\CORE.dll
+D:\FILES\PERSONALE\Synchronization\github\elearning\CORE\bin\CORE.pdb
+D:\FILES\PERSONALE\Synchronization\github\elearning\CORE\obj\Debug\CORE.pdb
+D:\FILES\PERSONALE\Synchronization\github\elearning\CORE\obj\Debug\ElearningPlatformCore.csprojResolveAssemblyReference.cache
+C:\Users\pdarkwa\Desktop\elearning\CORE\bin\CORE.dll
+C:\Users\pdarkwa\Desktop\elearning\CORE\bin\CORE.pdb
+C:\Users\pdarkwa\Desktop\elearning\CORE\obj\Debug\CORE.dll
+C:\Users\pdarkwa\Desktop\elearning\CORE\obj\Debug\CORE.pdb
+C:\Users\pdarkwa\Desktop\elearning\CORE\obj\Debug\ElearningPlatformCore.csprojResolveAssemblyReference.cache
+C:\Users\pdarkwa\Desktop\Universal Bible School\core\bin\CORE.dll
+C:\Users\pdarkwa\Desktop\Universal Bible School\core\bin\CORE.pdb
+C:\Users\pdarkwa\Desktop\Universal Bible School\core\obj\Debug\CORE.dll
+C:\Users\pdarkwa\Desktop\Universal Bible School\core\obj\Debug\CORE.pdb
+C:\Users\pdarkwa\Desktop\Universal Bible School\core\obj\Debug\ElearningPlatformCore.csprojResolveAssemblyReference.cache
+D:\FILES\PERSONALE\Synchronization\github\elearning\UBS\core\bin\CORE.dll
+D:\FILES\PERSONALE\Synchronization\github\elearning\UBS\core\bin\CORE.pdb
+D:\FILES\PERSONALE\Synchronization\github\elearning\UBS\core\obj\Debug\ElearningPlatformCore.csprojResolveAssemblyReference.cache
+D:\FILES\PERSONALE\Synchronization\github\elearning\UBS\core\obj\Debug\CORE.dll
+D:\FILES\PERSONALE\Synchronization\github\elearning\UBS\core\obj\Debug\CORE.pdb

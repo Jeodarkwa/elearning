@@ -1,0 +1,77 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+
+             <link rel="stylesheet" type="text/css" href="Style/Site.css" />
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+        
+    </asp:ContentPlaceHolder>
+
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+
+        <header>
+        <div class="content-wrapper">
+            <div class="float-left">
+                <p class="site-title">
+                    <img src="Images/universal_Bible.png" />
+                    <a id="A1" runat="server" href="~/Home.aspx">Universal Bible School</a>
+                    
+                </p>
+            </div>
+            <div class="float-right">
+                <section id="login">
+                    <asp:LoginView ID="LoginView1" runat="server" ViewStateMode="Disabled">
+                        <AnonymousTemplate>
+                            <ul>
+                                <li><a id="loginLink" runat="server" href="~/Account/Login.aspx">Log in</a></li>
+                            </ul>
+                        </AnonymousTemplate>
+                        <LoggedInTemplate>
+                            <p>
+
+                                Hello, <a id="A2" runat="server" class="username" href="~/Account/Manage.aspx" title="Manage your account">
+                                    <asp:LoginName ID="LoginName1" runat="server" CssClass="username.aspx" /></a>!
+                                <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" />
+                                 <a id="registerLink" runat="server" href="~/Account/Register.aspx">Register</a>
+                            </p>
+                           
+                        </LoggedInTemplate>
+                    </asp:LoginView>
+                </section>
+                <nav>
+                    <ul id="menu">
+                        <li><a id="A3" runat="server" href="~/Resources/Home.aspx">Home</a></li>
+                        <li><a id="A4" runat="server" href="~/Student/Exam.aspx">Exams</a></li>
+                        <li><a id="A5" runat="server" href="~/Student/StudentPage.aspx">Student Page</a></li>
+                         <li><a id="A6" runat="server" href="~/Resources/Contact.aspx">Contact</a></li>
+                         <li><a id="A7" runat="server" href="~/Resources/Lessons.aspx">Lessons</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+
+        <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
+        <section class="content-wrapper main-content clear-fix"/>
+
+        <asp:ContentPlaceHolder id="MainContent" runat="server">
+        
+           tehiei 
+            Maater page
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

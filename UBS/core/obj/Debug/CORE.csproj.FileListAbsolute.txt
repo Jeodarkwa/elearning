@@ -1,0 +1,5 @@
+D:\FILES\PERSONALE\Synchronization\github\elearning\CORE\bin\CORE.dll
+D:\FILES\PERSONALE\Synchronization\github\elearning\CORE\bin\CORE.pdb
+D:\FILES\PERSONALE\Synchronization\github\elearning\CORE\obj\Debug\CORE.dll
+D:\FILES\PERSONALE\Synchronization\github\elearning\CORE\obj\Debug\CORE.pdb
+D:\FILES\PERSONALE\Synchronization\github\elearning\CORE\obj\Debug\CORE.csprojResolveAssemblyReference.cache
